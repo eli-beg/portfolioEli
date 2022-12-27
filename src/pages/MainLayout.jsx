@@ -1,9 +1,11 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import HeaderContainer from "../components/Header/HeaderContainer";
 
 const MainLayout = () => (
   <Grid container display="flex" flexDirection="row" wrap="wrap">
-    {/* <Grid item width="100%">
+    <Grid item width="100%">
       <HeaderContainer />
     </Grid>
     <Grid
@@ -16,10 +18,6 @@ const MainLayout = () => (
     >
       <Outlet />
     </Grid>
-    <Grid item width="100%">
-      <FooterContainer />
-    </Grid> */}
-    <Typography>HELLO</Typography>
   </Grid>
 );
 
