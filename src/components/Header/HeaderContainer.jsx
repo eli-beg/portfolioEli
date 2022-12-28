@@ -33,6 +33,11 @@ const HeaderContainer = () => {
   const handleCloseMenuMobile = () => {
     setMenuIsOpen(false);
   };
+  const handleNavigateToSection = (e, text) => {
+    const anchor = document.querySelector(`#${text.replace(" ", "-")}`);
+    anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    setMenuIsOpen(false);
+  };
 
   return (
     <Header
@@ -43,6 +48,7 @@ const HeaderContainer = () => {
       navigate={navigate}
       activeButton={activeButton}
       setActiveButton={setActiveButton}
+      handleNavigateToSection={handleNavigateToSection}
     />
   );
 };

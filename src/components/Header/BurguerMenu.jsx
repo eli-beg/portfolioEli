@@ -9,6 +9,7 @@ const BurgerMenu = (props) => {
     handleOpenMenuMobile,
     handleCloseMenuMobile,
     menuIsOpen,
+    handleNavigateToSection,
     MenuIcon = null,
   } = props;
 
@@ -39,7 +40,7 @@ const BurgerMenu = (props) => {
             {menu.map((page) => (
               <Button
                 key={page.id}
-                // onClick={(e) => handleOpenMenu(e, page.id)}
+                onClick={(e) => handleNavigateToSection(e, page.text)}
                 sx={{
                   my: 2,
                   mx: { md: 0.5, lg: 0.7 },

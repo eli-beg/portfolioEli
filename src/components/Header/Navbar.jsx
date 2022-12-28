@@ -1,18 +1,21 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 
-const Navbar = ({ menu, navigate, activeButton, setActiveButton, trigger }) => {
-  const handleOpenMenu = (e, id) => {
-    setActiveButton(id);
-  };
-
+const Navbar = ({
+  menu,
+  navigate,
+  activeButton,
+  setActiveButton,
+  trigger,
+  handleNavigateToSection,
+}) => {
   return (
     <Box sx={style.containerNavbar}>
       {menu &&
         menu.map((page) => (
           <Button
             key={page.id}
-            onClick={(e) => handleOpenMenu(e, page.id)}
+            onClick={(e) => handleNavigateToSection(e, page.text)}
             sx={{
               my: 2,
               mx: { md: 0.5, lg: 0.7 },

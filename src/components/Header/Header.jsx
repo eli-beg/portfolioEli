@@ -12,6 +12,7 @@ const Header = ({
   navigate,
   setActiveButton,
   activeButton,
+  handleNavigateToSection,
 }) => {
   const trigger = useScrollTrigger();
 
@@ -37,6 +38,7 @@ const Header = ({
             handleOpenMenuMobile={handleOpenMenuMobile}
             menuIsOpen={menuIsOpen}
             navigate={navigate}
+            handleNavigateToSection={handleNavigateToSection}
           />
 
           <Navbar
@@ -45,6 +47,7 @@ const Header = ({
             activeButton={activeButton}
             setActiveButton={setActiveButton}
             trigger={trigger}
+            handleNavigateToSection={handleNavigateToSection}
           />
         </Toolbar>
       </Container>
