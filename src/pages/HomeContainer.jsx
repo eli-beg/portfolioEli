@@ -1,6 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import Home from "../components/Home/Home";
+import AboutContainer from "../components/About/AboutContainer";
+import ProjectsContainer from "../components/Projects/ProjectsContainer";
+import ContactContainer from "../components/Contact/ContactContainer";
 
 const HomeContainer = () => {
   return (
@@ -20,38 +23,20 @@ const HomeContainer = () => {
       >
         <Home />
       </Grid>
-      <Grid
-        id="Sobre-mi"
-        item
-        width="1080px"
-        marginTop="50px"
-        height="700px"
-        sx={{ backgroundColor: "pink" }}
-      >
-        {" "}
-        <Typography>hola home</Typography>
+      <Grid id="Sobre-mi" item height="700px" width="100%" sx={{ zIndex: "2" }}>
+        <AboutContainer />
       </Grid>
       <Grid
         id="Proyectos"
         item
-        width="1080px"
-        marginTop="50px"
         height="700px"
-        sx={{ backgroundColor: "blue" }}
+        width="100%"
+        sx={{ zIndex: "2" }}
       >
-        {" "}
-        <Typography>Proyectos</Typography>
+        <ProjectsContainer />
       </Grid>
-      <Grid
-        id="Contacto"
-        item
-        width="1080px"
-        marginTop="50px"
-        height="700px"
-        sx={{ backgroundColor: "violet" }}
-      >
-        {" "}
-        <Typography>Contacto</Typography>
+      <Grid id="Contacto" item width="100%" height="700px" sx={{ zIndex: "2" }}>
+        <ContactContainer />
       </Grid>
     </Grid>
   );

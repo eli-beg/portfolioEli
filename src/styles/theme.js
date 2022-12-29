@@ -10,6 +10,7 @@ const theme = createTheme({
         },
       },
     },
+
     MuiTypography: {
       styleOverrides: {
         root: {
