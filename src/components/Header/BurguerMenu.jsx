@@ -26,6 +26,7 @@ const BurgerMenu = (props) => {
 
       <Box
         backgroundColor={menuIsOpen ? "white" : "none"}
+        height={menuIsOpen ? "500px" : "10px"}
         sx={style.containerMenuOpen}
       >
         {menuIsOpen && (
@@ -69,7 +70,7 @@ const style = {
   },
   containerMenuOpen: {
     width: "100%",
-    height: "500px",
+
     position: "fixed",
     top: 0,
     left: 0,

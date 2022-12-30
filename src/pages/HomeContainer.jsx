@@ -29,9 +29,12 @@ const HomeContainer = () => {
       <Grid
         id="Proyectos"
         item
-        height="700px"
         width="100%"
-        sx={{ zIndex: "2" }}
+        sx={{
+          zIndex: "2",
+
+          height: { xs: "1700px", lg: "800px" },
+        }}
       >
         <ProjectsContainer />
       </Grid>

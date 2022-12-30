@@ -20,7 +20,7 @@ const Header = ({
     <AppBar
       sx={{
         position: "fixed",
-        backgroundColor: trigger ? "#eceff1" : "#37474f",
+        backgroundColor: trigger ? "#eceff1" : "#151415",
         transition: ".5s ease-in-out",
         zIndex: 1300,
         boxShadow: "none",
