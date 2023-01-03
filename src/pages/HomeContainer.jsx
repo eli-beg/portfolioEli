@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Home from "../components/Home/Home";
 import AboutContainer from "../components/About/AboutContainer";
 import ProjectsContainer from "../components/Projects/ProjectsContainer";
@@ -14,13 +14,7 @@ const HomeContainer = () => {
       justifyContent="center"
       // sx={{ backgroundColor: "green" }}
     >
-      <Grid
-        id="Home"
-        item
-        xs={12}
-        height="700px"
-        sx={{ backgroundColor: "red" }}
-      >
+      <Grid id="Home" item xs={12} height="700px">
         <Home />
       </Grid>
       <Grid id="Sobre-mi" item height="700px" width="100%" sx={{ zIndex: "2" }}>
@@ -32,7 +26,6 @@ const HomeContainer = () => {
         width="100%"
         sx={{
           zIndex: "2",
-
           height: { xs: "1700px", lg: "800px" },
         }}
       >

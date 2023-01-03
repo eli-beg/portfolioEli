@@ -1,28 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Projects from "./Projects";
-import movieappImage2 from "../../images/movieappImage2.jpg";
-import ongImage from "../../images/ongImage.jpg";
-import pbudgetImage from "../../images/pbudgetImage.jpg";
+import { projectsItems } from "./ProjectsItems";
 
 const ProjectsContainer = () => {
-  const projectsItems = [
-    {
-      id: 1,
-      title: "The Movie App",
-      image: movieappImage2,
-    },
-    {
-      id: 2,
-      title: "ONG Somos Más",
-      image: ongImage,
-    },
-    {
-      id: 3,
-      title: "The pBudget App",
-      image: pbudgetImage,
-    },
-  ];
-  return <Projects projectsItems={projectsItems} />;
+  const [openModal, setOpenModal] = useState(false);
+  const [detailsItemToRender, setDetailsItemToRender] = useState(null);
+
+  const handleOpenModal = (itemToRender) => {
+    setDetailsItemToRender(itemToRender);
+    setOpenModal(true);
+  };
+  return (
+    <Projects
+      projectsItems={projectsItems}
+      handleOpenModal={handleOpenModal}
+      setOpenModal={setOpenModal}
+      openModal={openModal}
+      detailsItemToRender={detailsItemToRender}
+    />
+  );
 };
 
 export default ProjectsContainer;

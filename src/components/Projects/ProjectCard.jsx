@@ -1,20 +1,24 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const ProjectCard = ({ item }) => {
+const ProjectCard = ({ item, handleOpenModal }) => {
   return (
     <>
       <Box
         component="img"
-        width="375px"
-        height="400px"
         src={item.image}
         alt="img not found"
         sx={style.imageItem}
       />
       <Box sx={style.shadowImage}>
         <Typography sx={style.title}>{item.title}</Typography>
-        <Typography sx={style.subtitle}>Ver Proyecto</Typography>
+        <Typography
+          sx={style.subtitle}
+          component="span"
+          onClick={() => handleOpenModal(item)}
+        >
+          Ver Proyecto
+        </Typography>
       </Box>
     </>
   );
@@ -52,5 +56,5 @@ const style = {
     },
   },
   title: { opacity: 1, color: "white", fontSize: "20px" },
-  subtitle: { opacity: 1, color: "rgb(127, 17, 224)" },
+  subtitle: { opacity: 1, color: "rgb(127, 17, 224)", cursor: "pointer" },
 };

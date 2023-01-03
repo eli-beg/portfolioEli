@@ -2,8 +2,15 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 import background5 from "../../images/background5.jpg";
+import ModalProjectDetails from "../ModalProjectDetails/ModalProjectDetails";
 
-const Projects = ({ projectsItems }) => {
+const Projects = ({
+  detailsItemToRender,
+  projectsItems,
+  handleOpenModal,
+  openModal,
+  setOpenModal,
+}) => {
   return (
     <Box sx={style.backgroundBox}>
       <Grid container xs={11} sx={style.container}>
@@ -14,11 +21,16 @@ const Projects = ({ projectsItems }) => {
           {projectsItems &&
             projectsItems.map((item) => (
               <Grid item xs={12} lg={4} sx={style.projectCardContainer}>
-                <ProjectCard item={item} />
+                <ProjectCard item={item} handleOpenModal={handleOpenModal} />
               </Grid>
             ))}
         </Grid>
       </Grid>
+      <ModalProjectDetails
+        item={detailsItemToRender}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />
     </Box>
   );
 };
