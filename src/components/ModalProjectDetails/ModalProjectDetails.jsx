@@ -61,14 +61,14 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
               ? item.repository.map((item) => (
                   <Button
                     sx={{
-                      backgroundColor: "rgb(127, 17, 224)",
+                      backgroundColor: "#8C52FF",
                       color: "white",
                       marginRight: "10px",
                       "&:hover": {
                         backgroundColor: "black",
                         borderStyle: "solid",
                         borderWidth: "2px",
-                        borderColor: "rgb(127, 17, 224)",
+                        borderColor: "#8C52FF",
                       },
                     }}
                     onClick={() => window.open(item)}
@@ -80,14 +80,14 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
             {item?.deploy.length ? (
               <Button
                 sx={{
-                  backgroundColor: "rgb(127, 17, 224)",
+                  backgroundColor: "#8C52FF",
                   color: "white",
                   marginRight: "10px",
                   "&:hover": {
                     backgroundColor: "black",
                     borderStyle: "solid",
                     borderWidth: "2px",
-                    borderColor: "rgb(127, 17, 224)",
+                    borderColor: "#8C52FF",
                   },
                 }}
                 onClick={() => window.open(item.deploy[0])}

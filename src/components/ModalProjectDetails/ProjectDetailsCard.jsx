@@ -6,7 +6,7 @@ const ProjectDetailsCard = ({ title, contain }) => {
   return (
     <Grid item container xs={12} padding="20px">
       <Grid item containter xs={1} height="40px">
-        <BubbleChartIcon sx={{ color: "rgb(127, 17, 224)" }} />
+        <BubbleChartIcon sx={{ color: "#8C52FF" }} />
       </Grid>
       <Grid item container xs={11} sx={style.containContainer}>
         <Grid item xs={12} height="30px">
@@ -29,7 +29,7 @@ const style = {
     "&:hover": {
       backgroundColor: "#151415",
       borderBottom: "solid ",
-      borderBottomColor: "rgb(127, 17, 224)",
+      borderBottomColor: "#8C52FF",
       borderWidth: "2px",
       transition: ".7s ease-in",
     },

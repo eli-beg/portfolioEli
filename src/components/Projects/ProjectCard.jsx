@@ -56,5 +56,5 @@ const style = {
     },
   },
   title: { opacity: 1, color: "white", fontSize: "20px" },
-  subtitle: { opacity: 1, color: "rgb(127, 17, 224)", cursor: "pointer" },
+  subtitle: { opacity: 1, color: "#8C52FF", cursor: "pointer" },
 };
