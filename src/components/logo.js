@@ -7,7 +7,7 @@ export const Logo = ({ trigger }) => {
       <Box
         sx={{
           backgroundColor: "#8C52FF",
-          marginTop: ".6rem",
+          marginTop: ".5rem",
           position: "absolute",
           width: "65px",
           height: "30px",
