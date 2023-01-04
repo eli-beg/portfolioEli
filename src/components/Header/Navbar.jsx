@@ -20,7 +20,7 @@ const Navbar = ({
               my: 2,
               mx: { md: 0.5, lg: 0.7 },
               display: "block",
-              color: trigger ? "black" : "white",
+              color: trigger ? "#1F1F24" : "#FFFFFF",
               fontSize: { lg: "1.1rem" },
               backgroundColor: activeButton === page.id ? "#37474f" : null,
               textTransform: "none",

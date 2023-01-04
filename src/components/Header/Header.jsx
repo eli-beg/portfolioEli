@@ -1,7 +1,14 @@
 import React from "react";
-import { AppBar, Container, Toolbar, useScrollTrigger } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Container,
+  Toolbar,
+  useScrollTrigger,
+} from "@mui/material";
 import Navbar from "./Navbar";
 import BurgerMenu from "./BurguerMenu";
+import { Logo } from "../logo";
 
 const Header = ({
   props,
@@ -20,7 +27,7 @@ const Header = ({
     <AppBar
       sx={{
         position: "fixed",
-        backgroundColor: trigger ? "#eceff1" : "#151415",
+        backgroundColor: trigger ? "#FFFFFF" : "#1F1F24",
         transition: ".5s ease-in-out",
         zIndex: 1300,
         boxShadow: "none",
@@ -40,7 +47,13 @@ const Header = ({
             navigate={navigate}
             handleNavigateToSection={handleNavigateToSection}
           />
-
+          <Box
+            width="120px"
+            height="70px"
+            sx={{ marginTop: "10px", marginLeft: "20px" }}
+          >
+            <Logo trigger={trigger} />
+          </Box>
           <Navbar
             menu={menu}
             navigate={navigate}
