@@ -4,6 +4,7 @@ import Home from "../components/Home/Home";
 import AboutContainer from "../components/About/AboutContainer";
 import ProjectsContainer from "../components/Projects/ProjectsContainer";
 import ContactContainer from "../components/Contact/ContactContainer";
+import SkillsContainer from "../components/Skills/SkillsContainer";
 
 const HomeContainer = () => {
   return (
@@ -20,6 +21,10 @@ const HomeContainer = () => {
       <Grid id="Sobre-mi" item height="900px" width="100%" sx={{ zIndex: "2" }}>
         <AboutContainer />
       </Grid>
+      <Grid id="Skills" item height="900px" width="100%" sx={{ zIndex: "2" }}>
+        <SkillsContainer />
+      </Grid>
+
       <Grid
         id="Proyectos"
         item

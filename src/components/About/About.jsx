@@ -25,8 +25,8 @@ const About = () => {
               Soy desarrolladora fullstack, detallista y curiosa. Encontré en la
               programación un espacio creativo y desafiante, en el cual puedo
               hallar soluciones para el cliente a través de la versatilidad del
-              código. Quiero ser parte de este ambiente colaborativo y diverso,
-              que genera la expansión y solidez en el mundo IT. Mi lenguaje
+              código. Quiero ser parte de un ambiente colaborativo y diverso,
+              que genera la expansión y solidez del mundo IT. Mi lenguaje
               principal es Javascript, y mis librerías más utilizadas son
               NodeJs, ReactJs, Material UI
             </Typography>

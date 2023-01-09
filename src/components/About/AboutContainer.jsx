@@ -4,19 +4,21 @@ import About from "./About";
 
 const AboutContainer = () => {
   return (
-    <Box
-      width="100%"
-      height="900px"
-      sx={{
-        backgroundColor: "#020202",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <Box sx={style.aboutContainer}>
       <About />
     </Box>
   );
 };
 
 export default AboutContainer;
+
+const style = {
+  aboutContainer: {
+    backgroundColor: "#020202",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "900px",
+  },
+};

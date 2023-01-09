@@ -1,13 +1,11 @@
 import React from "react";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import LensIcon from "@mui/icons-material/Lens";
 
-const NextIcon = ({ direction, navigateNext, navigatePreviuos }) => {
+const NextIcon = ({ direction, getTraslate }) => {
   return (
-    <NavigateNextIcon
-      onClick={() =>
-        direction === "right" ? navigateNext() : navigatePreviuos()
-      }
-      fontSize="large"
+    <LensIcon
+      onClick={getTraslate}
+      fontSize="xs"
       sx={{
         color: "white",
         transform: direction === "left" ? "rotate(180deg)" : "",

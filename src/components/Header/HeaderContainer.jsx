@@ -19,10 +19,14 @@ const HeaderContainer = () => {
     },
     {
       id: 3,
-      text: "Proyectos",
+      text: "Skills",
     },
     {
       id: 4,
+      text: "Proyectos",
+    },
+    {
+      id: 5,
       text: "Contacto",
     },
   ];
