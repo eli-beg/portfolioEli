@@ -4,7 +4,6 @@ import ProjectDetailsCardContainer from "./ProjectDetailsCardContainer";
 import background1 from "../../images/background1.webp";
 
 const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
-  console.log(item);
   return (
     <Dialog
       open={openModal}
@@ -19,32 +18,14 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
           height: { xs: "1400px", lg: "700px" },
           backgroundImage: `url(${background1})`,
           backgroundSize: "cover",
-          // backgroundColor: "#151415",
           display: "flex",
           flexWrap: { xs: "wrap", lg: "no-wrap" },
           justifyContent: "center",
         }}
       >
-        <Grid
-          item
-          container
-          xs={11}
-          lg={6}
-          sx={{
-            height: { xs: "300px", lg: "400px" },
-            marginTop: { xs: "30px", lg: "130px" },
-          }}
-          justifyContent="center"
-          alignItems="flex-start"
-        >
+        <Grid item container xs={11} lg={6} sx={style.containerTitle}>
           <Grid item width="100%" alignSelf="flex-start" marginLeft="50px">
-            <Typography
-              sx={{
-                color: "white",
-                fontWeight: "600",
-                fontSize: { xs: ".9rem", lg: "1.2rem" },
-              }}
-            >
+            <Typography sx={style.title}>
               Proyecto: {item && item.title}
             </Typography>
           </Grid>
@@ -52,7 +33,7 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
             <Box
               component="img"
               alt="img not found"
-              sx={{ maxWidth: { xs: "380px", lg: "500px" } }}
+              sx={style.projectGif}
               src={item && item.gif}
             />
           </Grid>
@@ -60,17 +41,7 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
             {item?.repository.length >= 1
               ? item.repository.map((item) => (
                   <Button
-                    sx={{
-                      backgroundColor: "#8C52FF",
-                      color: "white",
-                      marginRight: "10px",
-                      "&:hover": {
-                        backgroundColor: "black",
-                        borderStyle: "solid",
-                        borderWidth: "2px",
-                        borderColor: "#8C52FF",
-                      },
-                    }}
+                    sx={style.buttonNavigation}
                     onClick={() => window.open(item)}
                   >
                     Repositorio
@@ -79,17 +50,7 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
               : null}
             {item?.deploy.length ? (
               <Button
-                sx={{
-                  backgroundColor: "#8C52FF",
-                  color: "white",
-                  marginRight: "10px",
-                  "&:hover": {
-                    backgroundColor: "black",
-                    borderStyle: "solid",
-                    borderWidth: "2px",
-                    borderColor: "#8C52FF",
-                  },
-                }}
+                sx={style.buttonNavigation}
                 onClick={() => window.open(item.deploy[0])}
               >
                 Website
@@ -97,17 +58,7 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
             ) : null}
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          xs={11}
-          lg={6}
-          sx={{
-            // backgroundColor: "green",
-            justifyContent: { xs: "center", lg: "flex-start" },
-            alignItems: "center",
-          }}
-        >
+        <Grid item container xs={11} lg={6} sx={style.projectDetailsContainer}>
           <ProjectDetailsCardContainer item={item} />
         </Grid>
       </Grid>
@@ -116,3 +67,33 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
 };
 
 export default ModalProjectDetails;
+
+const style = {
+  containerTitle: {
+    height: { xs: "300px", lg: "400px" },
+    marginTop: { xs: "30px", lg: "130px" },
+    justifyContent: "center",
+    alignItems: "flex-start",
+  },
+  title: {
+    color: "white",
+    fontWeight: "600",
+    fontSize: { xs: ".9rem", lg: "1.2rem" },
+  },
+  projectGif: { maxWidth: { xs: "380px", lg: "500px" } },
+  buttonNavigation: {
+    backgroundColor: "#8C52FF",
+    color: "white",
+    marginRight: "10px",
+    "&:hover": {
+      backgroundColor: "black",
+      borderStyle: "solid",
+      borderWidth: "2px",
+      borderColor: "#8C52FF",
+    },
+  },
+  projectDetailsContainer: {
+    justifyContent: { xs: "center", lg: "flex-start" },
+    alignItems: "center",
+  },
+};

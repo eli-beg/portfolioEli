@@ -3,6 +3,7 @@ import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { getTraslate } from "../../utils/getTranslateSlider";
 import NextIcon from "../NextIcon";
 import { useTheme } from "@emotion/react";
+import SkillsCard from "./SkillsCard";
 
 const Skills = ({ items }) => {
   const [translate, setTranslate] = useState(375);
@@ -29,6 +30,9 @@ const Skills = ({ items }) => {
 
   return (
     <Grid container xs={12} flexDirection="column" alignItems="center">
+      <Grid item xs={12} sx={styles.containerTitle}>
+        <Typography sx={styles.title}>Skills</Typography>
+      </Grid>
       <Grid xs={10} sx={styles.containerTranslateBackground}>
         {translate && (
           <Grid
@@ -44,18 +48,7 @@ const Skills = ({ items }) => {
             }}
           >
             {items?.map((item) => (
-              <Grid
-                item
-                sx={{
-                  backgroundColor: "green",
-                  marginLeft: "15px",
-                  marginRight: "15px",
-                  minWidth: "350px",
-                  height: "300px",
-                }}
-              >
-                <Typography sx={{ color: "white" }}>{item.title}</Typography>
-              </Grid>
+              <SkillsCard item={item} />
             ))}
           </Grid>
         )}
@@ -94,5 +87,18 @@ const styles = {
     maxWidth: { xs: "380px", md: "760px", lg: "1140px" },
     position: "relative",
     overflow: "hidden",
+  },
+  title: {
+    fontWeight: 600,
+    fontSize: {
+      xs: "1.5rem",
+      lg: "2rem",
+      color: "white",
+      textAlign: "center",
+    },
+  },
+  containerTitle: {
+    height: "50px",
+    marginBottom: "50px",
   },
 };

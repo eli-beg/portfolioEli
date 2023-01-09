@@ -47,7 +47,7 @@ const style = {
     justifyContent: "center",
   },
   container: {
-    marginTop: "100px",
+    marginTop: "150px",
     justifyContent: "center",
     alignContent: "flex-start",
     height: { xs: "1500px", lg: "700px" },
