@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Dialog, Grid, Typography } from "@mui/material";
 import ProjectDetailsCardContainer from "./ProjectDetailsCardContainer";
 import background1 from "../../images/background1.webp";
+import CloseIcon from "@mui/icons-material/Close";
 
 const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
   return (
@@ -11,6 +12,21 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
       maxWidth="lg"
       onClose={() => setOpenModal(false)}
     >
+      <Grid
+        item
+        sx={{
+          position: "absolute",
+          alignSelf: "end",
+          marginTop: "10px",
+          marginRight: "10px",
+          width: "30px",
+        }}
+      >
+        <CloseIcon
+          onClick={() => setOpenModal(false)}
+          sx={{ color: "white", cursor: "pointer" }}
+        />
+      </Grid>
       <Grid
         container
         sx={{
