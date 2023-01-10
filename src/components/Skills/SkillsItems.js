@@ -9,7 +9,7 @@ export const items = [
     id: "1",
     icon: LaptopChromebookOutlinedIcon,
     title: "Frontend",
-    text: "Utilizo ReactJS para crear interfaces de usuarios, y para el estilo MaterialUI. Formik para validar formularios y Axios para peticiones al servidor",
+    text: "Utilizo ReactJS con Material UI para crear interfaces de usuarios. Formik para validar formularios y Axios para peticiones al servidor",
   },
   {
     id: "2",
@@ -27,12 +27,12 @@ export const items = [
     id: "4",
     icon: ShareOutlinedIcon,
     title: "Git",
-    text: "Principalmente GitHub para el control de versiones. GitFlow como flujo de trabajo.",
+    text: "Principalmente GitHub para el control de versiones. Experiencia en trabajo en equipo con GitFlow como flujo de trabajo.",
   },
   {
     id: "5",
     icon: Groups3OutlinedIcon,
     title: "Scrum",
-    text: "Experiencia académica en desarrollo ágil con marco Scrum. Jira para la división de tareas. ",
+    text: "Experiencia académica en desarrollo ágil con marco Scrum. Jira para la división de tareas.",
   },
 ];

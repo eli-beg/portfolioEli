@@ -56,6 +56,7 @@ const Skills = ({ items }) => {
 
       <Box sx={styles.iconContainer}>
         <NextIcon
+          direction={"left"}
           getTraslate={() =>
             setTranslate(getTraslate("left", translate, steps))
           }
@@ -78,7 +79,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     height: "40px",
-    width: { xs: "20px", md: "40px" },
+    marginTop: "10px",
+    width: "40px",
   },
   containerTranslateBackground: {
     display: "flex",
