@@ -8,13 +8,7 @@ import SkillsContainer from "../components/Skills/SkillsContainer";
 
 const HomeContainer = () => {
   return (
-    <Grid
-      container
-      width="100%"
-      height="100%"
-      justifyContent="center"
-      // sx={{ backgroundColor: "green" }}
-    >
+    <Grid container width="100%" height="100%" justifyContent="center">
       <Grid id="Home" item xs={12} height="700px">
         <Home />
       </Grid>
@@ -26,7 +20,7 @@ const HomeContainer = () => {
       >
         <AboutContainer />
       </Grid>
-      <Grid id="Skills" item height="700px" width="100%" sx={{ zIndex: "2" }}>
+      <Grid id="Skills" item height="900px" width="100%" sx={{ zIndex: "2" }}>
         <SkillsContainer />
       </Grid>
 

@@ -1,14 +1,7 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 
-const Navbar = ({
-  menu,
-  navigate,
-  activeButton,
-  setActiveButton,
-  trigger,
-  handleNavigateToSection,
-}) => {
+const Navbar = ({ menu, activeButton, trigger, handleNavigateToSection }) => {
   return (
     <Box sx={style.containerNavbar}>
       {menu &&

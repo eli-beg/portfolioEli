@@ -4,7 +4,7 @@ import me4 from "../../images/me/me4.jpg";
 
 const About = () => {
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" sx={{ marginTop: "30px" }}>
       <Grid item xs={12} sx={style.containerTitle}>
         <Typography sx={style.title}>Sobre mi</Typography>
       </Grid>
@@ -67,7 +67,10 @@ const style = {
       textAlign: "center",
     },
   },
-  containerTitle: { marginTop: "40px", height: "50px" },
+  containerTitle: {
+    // marginTop: { xs: "20px", lg: "10px" },
+    height: "50px",
+  },
   containerContain: {
     marginTop: "40px",
     height: { xs: "800px", lg: "500px" },

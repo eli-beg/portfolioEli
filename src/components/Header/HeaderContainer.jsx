@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
+import { navigateToSection } from "../../utils/navigateToSection";
 
 const HeaderContainer = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -38,8 +39,7 @@ const HeaderContainer = () => {
     setMenuIsOpen(false);
   };
   const handleNavigateToSection = (e, text) => {
-    const anchor = document.querySelector(`#${text.replace(" ", "-")}`);
-    anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    navigateToSection(text);
     setMenuIsOpen(false);
   };
 
