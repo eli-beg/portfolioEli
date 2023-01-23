@@ -16,7 +16,7 @@ const HomeContainer = () => {
         id="Sobre-mi"
         item
         width="100%"
-        sx={{ zIndex: "2", height: { xs: "1000px", lg: "700px" } }}
+        sx={{ zIndex: "2", height: { xs: "1100px", lg: "700px" } }}
       >
         <AboutContainer />
       </Grid>
