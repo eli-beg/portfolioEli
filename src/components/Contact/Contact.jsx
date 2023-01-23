@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import background1 from "../../images/background1.webp";
 
 const Contact = () => {
@@ -11,7 +11,6 @@ const Contact = () => {
         alt="img not found"
         sx={style.imageHome}
       />
-      <Typography>hola Contact</Typography>
     </>
   );
 };

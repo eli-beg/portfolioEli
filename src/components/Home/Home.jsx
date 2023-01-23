@@ -18,13 +18,29 @@ const Home = () => {
       <Box sx={style.containerHomeShadow} />
       <Grid container sx={style.containerContain}>
         <Grid item container sx={style.containerTitles}>
-          <Typography sx={style.title1}>Hola! Soy Eliana...</Typography>
-          <Typography sx={style.title2}>Bienvenidos a mi portfolio!</Typography>
+          <Grid item container sx={style.boxTitles}>
+            <Typography sx={style.title1}>Hola! Soy Eliana...</Typography>
+            <Typography sx={style.title2}>
+              Bienvenidos a mi portfolio!
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item container xs={12} justifyContent="center">
+        <Grid
+          item
+          container
+          xs={12}
+          justifyContent="center"
+          sx={style.navigationIcons}
+        >
           <NavigationIcons />
         </Grid>
-        <Grid item container xs={12} justifyContent="center">
+        <Grid
+          item
+          container
+          xs={12}
+          justifyContent="center"
+          sx={style.containerCircleDown}
+        >
           <SvgIcon
             component={ExpandCircleDownIcon}
             onClick={() => navigateToSection("Sobre mi")}
@@ -92,7 +108,7 @@ const style = {
     top: { xs: "56px", sm: "64px", md: "68px" },
     backgroundColor: "rgba(3,37,65,0.5)",
     width: "100%",
-    height: "700px",
+    height: "900px",
     objectFit: "cover",
     zIndex: "2",
   },
@@ -117,15 +133,30 @@ const style = {
     width: "100%",
     height: "100%",
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "center",
   },
   containerTitles: {
+    marginTop: { xs: "50px", lg: 0 },
+    width: "100%",
+    height: { lg: "60%" },
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  boxTitles: {
     width: { xs: "70%", md: "50%", lg: "35%" },
-    marginTop: "60px",
+    justifyContent: "center",
+    height: "50px",
+  },
+  navigationIcons: {
+    alignItems: "center",
+    height: "80px",
+    marginTop: { xs: "100px", lg: 0 },
+  },
+  containerCircleDown: {
+    height: "80px",
+    marginBottom: { xs: "100px", lg: 0 },
   },
   circleDownIcon: {
-    marginBottom: "100px",
     color: "white",
     fontSize: "45px",
     cursor: "pointer",
