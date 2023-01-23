@@ -9,7 +9,7 @@ export const items = [
     id: "1",
     icon: LaptopChromebookOutlinedIcon,
     title: "Frontend",
-    text: "Utilizo ReactJS con Material UI para crear interfaces de usuarios. Formik para validar formularios y Axios para peticiones al servidor",
+    text: "Utilizo ReactJS con Material UI para crear interfaces de usuarios. Formik para implementar formularios y Axios para peticiones al servidor",
   },
   {
     id: "2",
