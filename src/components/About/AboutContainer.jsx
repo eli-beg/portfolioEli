@@ -19,6 +19,6 @@ const style = {
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    height: "1000px",
+    height: "950px",
   },
 };
