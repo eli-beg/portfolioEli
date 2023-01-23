@@ -77,12 +77,13 @@ const styles = {
   iconContainer: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     height: "40px",
-    marginTop: "10px",
+    marginTop: "30px",
     width: "40px",
   },
   containerTranslateBackground: {
+    marginTop: "40px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -102,5 +103,7 @@ const styles = {
   containerTitle: {
     height: "50px",
     marginBottom: "50px",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };

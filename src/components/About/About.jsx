@@ -4,7 +4,7 @@ import me4 from "../../images/me/me4.jpg";
 
 const About = () => {
   return (
-    <Grid container justifyContent="center" sx={{ marginTop: "30px" }}>
+    <Grid container justifyContent="center" sx={{ marginTop: "10px" }}>
       <Grid item xs={12} sx={style.containerTitle}>
         <Typography sx={style.title}>Sobre mi</Typography>
       </Grid>
@@ -68,12 +68,12 @@ const style = {
     },
   },
   containerTitle: {
-    // marginTop: { xs: "20px", lg: "10px" },
-    height: "50px",
+    height: "80px",
+    marginTop: { xs: "80px", lg: 0 },
   },
   containerContain: {
     marginTop: "40px",
-    height: { xs: "800px", lg: "500px" },
+    height: { xs: "800px", lg: "600px" },
     justifyContent: "center",
     alignItems: "flex-start",
   },

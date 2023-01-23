@@ -3,8 +3,8 @@ import { Grid } from "@mui/material";
 import Home from "../components/Home/Home";
 import AboutContainer from "../components/About/AboutContainer";
 import ProjectsContainer from "../components/Projects/ProjectsContainer";
-import ContactContainer from "../components/Contact/ContactContainer";
 import SkillsContainer from "../components/Skills/SkillsContainer";
+import FooterContainer from "../components/Footer/FooterContainer";
 
 const HomeContainer = () => {
   return (
@@ -30,13 +30,13 @@ const HomeContainer = () => {
         width="100%"
         sx={{
           zIndex: "2",
-          height: { xs: "1700px", lg: "800px" },
+          height: { xs: "1700px", lg: "900px" },
         }}
       >
         <ProjectsContainer />
       </Grid>
-      <Grid id="Contacto" item width="100%" height="600px" sx={{ zIndex: "2" }}>
-        <ContactContainer />
+      <Grid id="Contacto" item width="100%" height="500px" sx={{ zIndex: "2" }}>
+        <FooterContainer />
       </Grid>
     </Grid>
   );

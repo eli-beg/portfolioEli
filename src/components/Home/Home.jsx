@@ -25,22 +25,10 @@ const Home = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          xs={12}
-          justifyContent="center"
-          sx={style.navigationIcons}
-        >
+        <Grid item container xs={12} sx={style.navigationIcons}>
           <NavigationIcons />
         </Grid>
-        <Grid
-          item
-          container
-          xs={12}
-          justifyContent="center"
-          sx={style.containerCircleDown}
-        >
+        <Grid item container xs={12} sx={style.containerCircleDown}>
           <SvgIcon
             component={ExpandCircleDownIcon}
             onClick={() => navigateToSection("Sobre mi")}
@@ -148,17 +136,19 @@ const style = {
     height: "50px",
   },
   navigationIcons: {
+    justifyContent: "center",
     alignItems: "center",
     height: "80px",
     marginTop: { xs: "100px", lg: 0 },
   },
   containerCircleDown: {
+    justifyContent: "center",
     height: "80px",
     marginBottom: { xs: "100px", lg: 0 },
   },
   circleDownIcon: {
     color: "white",
-    fontSize: "45px",
+    fontSize: "40px",
     cursor: "pointer",
     "&:hover": {
       color: "#8C52FF",

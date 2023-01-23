@@ -55,7 +55,7 @@ const appearIcons = keyframes({
 const style = {
   icons: {
     color: "white",
-    fontSize: "40px",
+    fontSize: "35px",
     marginLeft: "9px",
     marginRight: "9px",
     cursor: "pointer",

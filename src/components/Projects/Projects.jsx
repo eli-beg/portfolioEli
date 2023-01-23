@@ -41,7 +41,7 @@ const style = {
   backgroundBox: {
     backgroundImage: `url(${background5})`,
     backgroundSize: "contain",
-    height: { xs: "1700px", lg: "800px" },
+    height: { xs: "1700px", lg: "900px" },
     width: "100%",
     display: "flex",
     justifyContent: "center",
