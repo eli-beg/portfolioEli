@@ -42,15 +42,7 @@ const BurgerMenu = (props) => {
               <Button
                 key={page.id}
                 onClick={(e) => handleNavigateToSection(e, page.text)}
-                sx={{
-                  my: 2,
-                  mx: { md: 0.5, lg: 0.7 },
-                  display: "block",
-                  color: "black",
-                  fontSize: { lg: "1.1rem" },
-                  textTransform: "none",
-                  borderRadius: "20px",
-                }}
+                sx={style.buttonNavBar}
               >
                 {page.text}
               </Button>
@@ -86,5 +78,14 @@ const style = {
     top: 10,
     left: 15,
     color: "black",
+  },
+  buttonNavBar: {
+    my: 2,
+    mx: { md: 0.5, lg: 0.7 },
+    display: "block",
+    color: "black",
+    fontSize: { lg: "1.1rem" },
+    textTransform: "none",
+    borderRadius: "20px",
   },
 };

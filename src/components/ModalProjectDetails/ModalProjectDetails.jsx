@@ -12,31 +12,14 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
       maxWidth="lg"
       onClose={() => setOpenModal(false)}
     >
-      <Grid
-        item
-        sx={{
-          position: "absolute",
-          alignSelf: "end",
-          marginTop: "10px",
-          marginRight: "10px",
-          width: "30px",
-        }}
-      >
-        <CloseIcon
-          onClick={() => setOpenModal(false)}
-          sx={{ color: "white", cursor: "pointer" }}
-        />
+      <Grid item sx={style.containerCloseIcon}>
+        <CloseIcon onClick={() => setOpenModal(false)} sx={style.closeIcon} />
       </Grid>
       <Grid
         container
         sx={{
-          width: "100%",
-          height: { xs: "1400px", lg: "700px" },
           backgroundImage: `url(${background1})`,
-          backgroundSize: "cover",
-          display: "flex",
-          flexWrap: { xs: "wrap", lg: "no-wrap" },
-          justifyContent: "center",
+          ...containerText,
         }}
       >
         <Grid item container xs={11} lg={6} sx={style.containerTitle}>
@@ -112,4 +95,21 @@ const style = {
     justifyContent: { xs: "center", lg: "flex-start" },
     alignItems: "center",
   },
+  containerCloseIcon: {
+    position: "absolute",
+    alignSelf: "end",
+    marginTop: "10px",
+    marginRight: "10px",
+    width: "30px",
+  },
+  closeIcon: { color: "white", cursor: "pointer" },
+};
+
+const containerText = {
+  width: "100%",
+  height: { xs: "1400px", lg: "700px" },
+  backgroundSize: "cover",
+  display: "flex",
+  flexWrap: { xs: "wrap", lg: "no-wrap" },
+  justifyContent: "center",
 };

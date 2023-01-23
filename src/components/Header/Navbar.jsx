@@ -10,14 +10,9 @@ const Navbar = ({ menu, activeButton, trigger, handleNavigateToSection }) => {
             key={page.id}
             onClick={(e) => handleNavigateToSection(e, page.text)}
             sx={{
-              my: 2,
-              mx: { md: 0.5, lg: 0.7 },
-              display: "block",
               color: trigger ? "#1F1F24" : "#FFFFFF",
-              fontSize: { lg: "1.1rem" },
               backgroundColor: activeButton === page.id ? "#37474f" : null,
-              textTransform: "none",
-              borderRadius: "20px",
+              ...buttonStyle,
             }}
           >
             {page.text}
@@ -35,4 +30,13 @@ const style = {
     flexGrow: 1,
     justifyContent: "right",
   },
+};
+
+const buttonStyle = {
+  my: 2,
+  mx: { md: 0.5, lg: 0.7 },
+  display: "block",
+  fontSize: { lg: "1.1rem" },
+  textTransform: "none",
+  borderRadius: "20px",
 };

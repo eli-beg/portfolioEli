@@ -26,15 +26,8 @@ const Header = ({
   return (
     <AppBar
       sx={{
-        position: "fixed",
         backgroundColor: trigger ? "#FFFFFF" : "#1F1F24",
-        transition: ".5s ease-in-out",
-        zIndex: 1300,
-        boxShadow: "none",
-        height: "80px",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
+        ...styleAppBar,
       }}
     >
       <Container maxWidth="xl">
@@ -47,11 +40,7 @@ const Header = ({
             navigate={navigate}
             handleNavigateToSection={handleNavigateToSection}
           />
-          <Box
-            width="120px"
-            height="70px"
-            sx={{ marginTop: "10px", marginLeft: "20px" }}
-          >
+          <Box sx={containerLogo}>
             <Logo trigger={trigger} />
           </Box>
           <Navbar
@@ -69,3 +58,21 @@ const Header = ({
 };
 
 export default Header;
+
+const styleAppBar = {
+  position: "fixed",
+  transition: ".5s ease-in-out",
+  zIndex: 1300,
+  boxShadow: "none",
+  height: "80px",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+};
+
+const containerLogo = {
+  width: "120px",
+  height: "70px",
+  marginTop: "10px",
+  marginLeft: "20px",
+};

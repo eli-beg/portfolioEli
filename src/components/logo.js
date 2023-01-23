@@ -3,24 +3,16 @@ import { Box, Typography } from "@mui/material";
 
 export const Logo = ({ trigger }) => {
   return (
-    <Box width="100%" height="100%">
-      <Box
-        sx={{
-          backgroundColor: "#8C52FF",
-          marginTop: ".5rem",
-          position: "absolute",
-          width: "65px",
-          height: "30px",
-        }}
-      />
+    <Box sx={style.containerLogo}>
+      <Box sx={style.decorationLogo} />
       <Typography
+        color={trigger ? "#1F1F24" : "#FFFFFF"}
         sx={{
           marginLeft: ".5rem",
           position: "absolute",
           fontWeight: "600",
           fontSize: "1.9rem",
           letterSpacing: "-2px",
-          color: trigger ? "#1F1F24" : "#FFFFFF",
         }}
       >
         eli-bega
@@ -39,4 +31,18 @@ export const Logo = ({ trigger }) => {
       </Typography>
     </Box>
   );
+};
+
+const style = {
+  containerLogo: {
+    width: "100%",
+    height: "100%",
+  },
+  decorationLogo: {
+    backgroundColor: "#8C52FF",
+    marginTop: ".5rem",
+    position: "absolute",
+    width: "65px",
+    height: "30px",
+  },
 };
