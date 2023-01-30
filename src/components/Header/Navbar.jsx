@@ -25,7 +25,7 @@ export default Navbar;
 
 const style = {
   containerNavbar: {
-    mx: 20,
+    mx: 5,
     display: { xs: "none", md: "flex" },
     flexGrow: 1,
     justifyContent: "right",
