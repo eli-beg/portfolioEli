@@ -106,7 +106,7 @@ const style = {
     ...titleCommonsStyles,
     animation: `${type} 4s steps(40, end)`,
     animationFillMode: "forwards",
-    fontSize: { xs: "21px", md: "25px" },
+    fontSize: { xs: "25px", md: "35px" },
   },
 
   title2: {
@@ -115,7 +115,7 @@ const style = {
     animation: `${type2} 4s steps(40, end), ${blink} .5s step-end infinite alternate`,
     animationDelay: "4s",
     animationFillMode: "forwards",
-    fontSize: { xs: "21px", md: "25px" },
+    fontSize: { xs: "25px", md: "35px" },
   },
   containerContain: {
     zIndex: "3",
@@ -134,7 +134,7 @@ const style = {
     alignItems: "center",
   },
   boxTitles: {
-    width: { xs: "75%", md: "50%", lg: "35%" },
+    width: { xs: "70%", md: "50%", lg: "32%" },
     justifyContent: "center",
     height: "50px",
   },
