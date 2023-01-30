@@ -5,8 +5,10 @@ import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import { keyframes } from "@emotion/react";
 import { navigateToSection } from "../../utils/navigateToSection";
 import NavigationIcons from "./NavigationIcons";
+import { useWindowDimensions } from "../../utils/useWindowsDimensions";
 
 const Home = () => {
+  const dimensions = useWindowDimensions();
   return (
     <>
       <Box
@@ -15,8 +17,8 @@ const Home = () => {
         alt="img not found"
         sx={style.imageHome}
       />
-      <Box sx={style.containerHomeShadow} />
-      <Grid container sx={style.containerContain}>
+      <Box width={dimensions.width} sx={style.containerHomeShadow} />
+      <Grid container width={dimensions.width} sx={style.containerContain}>
         <Grid item container sx={style.containerTitles}>
           <Grid item container sx={style.boxTitles}>
             <Typography sx={style.title1}>Hola! Soy Eliana...</Typography>
@@ -95,18 +97,17 @@ const style = {
     position: "absolute",
     top: { xs: "56px", sm: "64px", md: "68px" },
     backgroundColor: "rgba(3,37,65,0.5)",
-    width: "100%",
+
     height: "900px",
     objectFit: "cover",
     zIndex: "2",
-    minWidth: "400px",
   },
 
   title1: {
     ...titleCommonsStyles,
     animation: `${type} 4s steps(40, end)`,
     animationFillMode: "forwards",
-    fontSize: { xs: "25px", md: "35px" },
+    fontSize: { xs: "21px", md: "35px" },
   },
 
   title2: {
@@ -115,13 +116,13 @@ const style = {
     animation: `${type2} 4s steps(40, end), ${blink} .5s step-end infinite alternate`,
     animationDelay: "4s",
     animationFillMode: "forwards",
-    fontSize: { xs: "25px", md: "35px" },
+    fontSize: { xs: "21px", md: "35px" },
   },
   containerContain: {
     zIndex: "3",
     position: "absolute",
     top: { xs: "16%", lg: "10%" },
-    width: "100%",
+
     height: "100%",
     flexDirection: "row",
     justifyContent: "center",

@@ -4,11 +4,16 @@ import me4 from "../../images/me/me4.jpg";
 
 const About = () => {
   return (
-    <Grid container justifyContent="center" sx={{ marginTop: "10px" }}>
+    <Grid
+      container
+      width="100%"
+      justifyContent="center"
+      sx={{ marginTop: "10px" }}
+    >
       <Grid item xs={12} sx={style.containerTitle}>
         <Typography sx={style.title}>Sobre mi</Typography>
       </Grid>
-      <Grid item container xs={11} sx={style.containerContain}>
+      <Grid item container xs={12} sx={style.containerContain}>
         <Grid item container xs={12} lg={5} sx={style.containerImage}>
           <Box component="img" alt="img not found" src={me4} sx={style.image} />
         </Grid>
@@ -74,6 +79,7 @@ const style = {
   containerContain: {
     marginTop: "40px",
     height: { xs: "800px", lg: "600px" },
+
     justifyContent: "center",
     alignItems: "flex-start",
   },

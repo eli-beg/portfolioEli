@@ -33,7 +33,7 @@ const Skills = ({ items }) => {
       <Grid item xs={12} sx={styles.containerTitle}>
         <Typography sx={styles.title}>Skills</Typography>
       </Grid>
-      <Grid xs={10} sx={styles.containerTranslateBackground}>
+      <Grid xs={11} sx={styles.containerTranslateBackground}>
         {translate && (
           <Grid
             container
