@@ -16,7 +16,7 @@ export const projectsItems = [
     technologies:
       "Para el desarrollo se utilizó ReactJS y MaterialUI como framework visual",
     moreDetails: "Proyecto personal, práctica de aprendizaje. Nov - Dic 2022",
-    repository: ["https://github.com/eli-beg/theMovieApp"],
+    repository: [{ type: "", link: "https://github.com/eli-beg/theMovieApp" }],
     deploy: ["https://themovieappdb.netlify.app/"],
   },
   {
@@ -31,8 +31,8 @@ export const projectsItems = [
     moreDetails:
       "Proyecto grupal, Práctica Profesional en el marco de Alkemy Labs. Sept - Oct 2022",
     repository: [
-      "https://github.com/alkemyTech/OT287-server",
-      "https://github.com/alkemyTech/OT287-client",
+      { type: "back", link: "https://github.com/alkemyTech/OT287-server" },
+      { type: "front", link: "https://github.com/alkemyTech/OT287-client" },
     ],
     deploy: [],
   },
@@ -47,7 +47,9 @@ export const projectsItems = [
       "Back-end: NodeJS, Express, PostgreSQL. Front-end: ReactJS, MaterialUI y ChartJS",
     moreDetails:
       "Proyecto personal, práctica realizada para el ingreso a la aceleración FullStack de Alkemy. Jun - Agos 2022",
-    repository: ["https://github.com/eli-beg/personalbudget"],
+    repository: [
+      { type: "", link: "https://github.com/eli-beg/personalbudget" },
+    ],
     deploy: [],
   },
 ];

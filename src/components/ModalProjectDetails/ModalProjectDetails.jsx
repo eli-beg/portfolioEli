@@ -41,9 +41,9 @@ const ModalProjectDetails = ({ item, openModal, setOpenModal }) => {
               ? item.repository.map((item) => (
                   <Button
                     sx={style.buttonNavigation}
-                    onClick={() => window.open(item)}
+                    onClick={() => window.open(item.link)}
                   >
-                    Repositorio
+                    Repositorio {item.type}
                   </Button>
                 ))
               : null}
