@@ -12,7 +12,7 @@ const HomeContainer = () => {
   return (
     <Grid container width="100%" height="100%" justifyContent="center">
       <Grid id="Home" item xs={12} height="800px">
-        <Home />
+        <Home dimensions={dimensions.width} />
       </Grid>
       <Grid
         id="Sobre-mi"

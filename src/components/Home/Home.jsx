@@ -5,10 +5,8 @@ import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import { keyframes } from "@emotion/react";
 import { navigateToSection } from "../../utils/navigateToSection";
 import NavigationIcons from "./NavigationIcons";
-import { useWindowDimensions } from "../../utils/useWindowsDimensions";
 
-const Home = () => {
-  const dimensions = useWindowDimensions();
+const Home = ({ dimensions }) => {
   return (
     <>
       <Box
@@ -17,8 +15,8 @@ const Home = () => {
         alt="img not found"
         sx={style.imageHome}
       />
-      <Box width={dimensions.width} sx={style.containerHomeShadow} />
-      <Grid container width={dimensions.width} sx={style.containerContain}>
+      <Box width={dimensions} sx={style.containerHomeShadow} />
+      <Grid container width={dimensions} sx={style.containerContain}>
         <Grid item container sx={style.containerTitles}>
           <Grid item container sx={style.boxTitles}>
             <Typography sx={style.title1}>Hola! Soy Eliana...</Typography>
@@ -135,7 +133,7 @@ const style = {
     alignItems: "center",
   },
   boxTitles: {
-    width: { xs: "70%", md: "50%", lg: "32%" },
+    width: { xs: "80%", md: "50%", lg: "32%" },
     justifyContent: "center",
     height: "50px",
   },
