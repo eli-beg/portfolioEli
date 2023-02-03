@@ -10,9 +10,9 @@ const ProjectDetailsCardContainer = ({ item }) => {
       {technologies && (
         <ProjectDetailsCard title={"Tecnologías"} contain={technologies} />
       )}
-      {moreDetails && (
+      {moreDetails ? (
         <ProjectDetailsCard title={"Más Detalles"} contain={moreDetails} />
-      )}
+      ) : null}
     </Grid>
   );
 };

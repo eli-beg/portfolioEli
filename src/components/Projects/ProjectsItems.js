@@ -4,6 +4,8 @@ import pbudgetImage from "../../images/pbudgetImage.jpg";
 import gif from "../../images/detailsProjects/MovieApp/gif.gif";
 import gifOng from "../../images/detailsProjects/ong/gif-ong.gif";
 import gifpBudget from "../../images/detailsProjects/pbudget/pbudget.gif";
+import gifPottery from "../../images/detailsProjects/Maquetahtml/gifPottery.gif";
+import maquetaHtml from "../../images/detailsProjects/Maquetahtml/maquetaHtml.jpg";
 
 export const projectsItems = [
   {
@@ -51,5 +53,22 @@ export const projectsItems = [
       { type: "", link: "https://github.com/eli-beg/personalbudget" },
     ],
     deploy: [],
+  },
+  {
+    id: 4,
+    title: "Maqueta Landing Page",
+    image: maquetaHtml,
+    gif: gifPottery,
+    overview:
+      "Maqueta realizada como práctica obligatoria de certificación de Diseño Web Responsive de freeCodeCamp.org. Enero 2023",
+    technologies: "HTML, CSS",
+    moreDetails: "",
+    repository: [
+      {
+        type: "",
+        link: "https://codesandbox.io/s/landing-page-freecodecamp-webresponsive-3jvbzg",
+      },
+    ],
+    deploy: ["https://3jvbzg.csb.app/"],
   },
 ];

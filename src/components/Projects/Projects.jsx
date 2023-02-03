@@ -17,10 +17,10 @@ const Projects = ({
         <Grid item>
           <Typography sx={style.title}>Mis Proyectos</Typography>
         </Grid>
-        <Grid container item wrap="wrap" xs={12} justifyContent="space-around">
+        <Grid item container sx={style.cardsContainer}>
           {projectsItems &&
             projectsItems.map((item) => (
-              <Grid item xs={12} lg={4} sx={style.projectCardContainer}>
+              <Grid item sx={style.projectCardContainer} xs={12} lg={3}>
                 <ProjectCard item={item} handleOpenModal={handleOpenModal} />
               </Grid>
             ))}
@@ -41,16 +41,18 @@ const style = {
   backgroundBox: {
     backgroundImage: `url(${background5})`,
     backgroundSize: "contain",
-    height: { xs: "1700px", lg: "900px" },
+    maxHeight: "100%",
     width: "100%",
     display: "flex",
     justifyContent: "center",
+    boxSizing: "border-box",
   },
   container: {
-    marginTop: "150px",
+    margin: "100px 0px",
     justifyContent: "center",
     alignContent: "flex-start",
-    height: { xs: "1500px", lg: "700px" },
+    height: "100%",
+    boxSizing: "border-box",
   },
   title: {
     fontWeight: 600,
@@ -59,15 +61,23 @@ const style = {
       lg: "2rem",
       color: "white",
       textAlign: "center",
-      marginBottom: "80px",
+      margin: "80px",
     },
   },
   projectCardContainer: {
-    height: "400px",
+    width: { xs: "325px", lg: "375px" },
+    height: { xs: "350px", lg: "400px" },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "20px",
-    marginBottom: "20px",
+    margin: "40px",
+    boxSizing: "border-box",
+  },
+  cardsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "no-wrap",
+    justifyContent: "center",
+    maxHeight: "100%",
   },
 };
