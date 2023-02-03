@@ -81,7 +81,7 @@ const style = {
   },
   buttonNavBar: {
     my: 2,
-    mx: { md: 0.5, lg: 0.7 },
+    mx: "auto",
     display: "block",
     color: "black",
     fontSize: { lg: "1.1rem" },

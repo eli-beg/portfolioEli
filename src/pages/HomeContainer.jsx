@@ -34,12 +34,13 @@ const HomeContainer = () => {
       </Grid>
 
       <Grid
-        id="Proyectos"
         item
+        container
+        id="Proyectos"
         width={dimensions.width}
         sx={{
           zIndex: "2",
-          height: { xs: "1700px", lg: "900px" },
+          maxHeight: "100%",
         }}
       >
         <ProjectsContainer />
