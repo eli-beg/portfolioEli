@@ -5,11 +5,28 @@ import gif from "../../images/detailsProjects/MovieApp/gif.gif";
 import gifOng from "../../images/detailsProjects/ong/gif-ong.gif";
 import gifpBudget from "../../images/detailsProjects/pbudget/pbudget.gif";
 import gifPottery from "../../images/detailsProjects/Maquetahtml/gifPottery.gif";
+import gifMarvelSearcher from "../../images/detailsProjects/MarvelSearcher/gifMarvelSearcher.gif";
 import maquetaHtml from "../../images/detailsProjects/Maquetahtml/maquetaHtml.jpg";
+import marvelSearcherImage1 from "../../images/detailsProjects/MarvelSearcher/marvelSearcherImage1.jpg";
 
 export const projectsItems = [
   {
     id: 1,
+    title: "Marvel Searcher",
+    image: marvelSearcherImage1,
+    gif: gifMarvelSearcher,
+    overview:
+      "Marvel Searcher te permitirá realizar búsquedas de personajes del universo Marvel y consultar por sus comics relacionados y detalles de los mismos. También podrás almacenar tus búsquedas favoritas.",
+    technologies: "Para el desarrollo se utilizó ReactJS y Styled Components",
+    moreDetails:
+      "Proyecto final, Bootcamp desarrollo frontend LenioLabs - Julio 2023",
+    repository: [
+      { type: "", link: "https://github.com/eli-beg/marvelsearcher" },
+    ],
+    deploy: ["https://marvelsearcherapp.netlify.app/"],
+  },
+  {
+    id: 2,
     title: "The Movie App",
     image: movieappImage2,
     gif: gif,
@@ -18,11 +35,13 @@ export const projectsItems = [
     technologies:
       "Para el desarrollo se utilizó ReactJS y MaterialUI como framework visual",
     moreDetails: "Proyecto personal, práctica de aprendizaje. Nov - Dic 2022",
-    repository: [{ type: "", link: "https://github.com/eli-beg/theMovieApp" }],
-    deploy: ["https://themovieappdb.netlify.app/"],
+    repository: [
+      { type: "", link: "https://github.com/eli-beg/marvelsearcher" },
+    ],
+    deploy: ["https://marvelsearcherapp.netlify.app/"],
   },
   {
-    id: 2,
+    id: 3,
     title: "ONG Somos Más",
     image: ongImage,
     gif: gifOng,
@@ -39,7 +58,7 @@ export const projectsItems = [
     deploy: [],
   },
   {
-    id: 3,
+    id: 4,
     title: "The pBudget App",
     image: pbudgetImage,
     gif: gifpBudget,
@@ -55,7 +74,7 @@ export const projectsItems = [
     deploy: [],
   },
   {
-    id: 4,
+    id: 5,
     title: "Maqueta Landing Page",
     image: maquetaHtml,
     gif: gifPottery,
